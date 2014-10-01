@@ -3,7 +3,7 @@
  * Plugin Name: MailingReport for Wordpress
  * Plugin URI: https://wordpress.org/plugins/mailingreport/
  * Description: Link your MailingReport account with your Wordpress website.
- * Version: 1.0
+ * Version: 1.1
  * Author: MailingReport
  * Author URI: https://profiles.wordpress.org/mailingreport
  * License: MIT
@@ -85,5 +85,6 @@ add_action('widgets_init', function(){
     register_widget('\Mgrt\Wordpress\Widget\CampaignWidget');
 });
 
-add_action('init', array(new \Mgrt\Wordpress\Bootstrap(), 'init'));
+$MgrtBootstrap = new \Mgrt\Wordpress\Bootstrap();
+add_action('init', array($MgrtBootstrap, 'init'));
 

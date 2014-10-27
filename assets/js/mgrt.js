@@ -68,6 +68,7 @@ jQuery(function(){
     var total_users = 0;
     var current_users = 0;
     var times = [];
+    var last_response = null;
 
     function moy(data) {
         if (data.length == 0) {
@@ -86,14 +87,15 @@ jQuery(function(){
         }
 
         var xhr = jQuery.post(ajaxurl, jQuery.extend({action: 'mgrt_force_sync'}, last_recall), function (r) {
-            try{
+            // try{
                 r = JSON.parse(r);
-            }catch(e){
-                alert(_error_sync_trans);
-                is_syncing = false;
-                //window.location.reload();
-                return;
-            }
+            // }catch(e){
+            //     alert(_error_sync_trans);
+            //     is_syncing = false;
+            //     //window.location.reload();
+            //     return;
+            // }
+            last_response = r;
 
             times = times.concat(r.times);
             console.log(moy(times) + 's per contact');
@@ -117,8 +119,29 @@ jQuery(function(){
                     cb(current_users+total_users);
                 }
             }
-        }).fail(function() {
-            alert(_error_sync_trans);
+        }).fail(function(e) {
+            if (e == null) {
+                e = {
+                    status: 'NaN',
+                    responseText: 'Parsing error'
+                }
+            }
+            console.log(e);
+            // alert(_error_sync_trans);
+            var msg = '';
+            if (last_response != null) {
+                msg  = 'last_recall\n';
+                msg += 'sequence: ' + (typeof last_response.last_recall.sequence == 'undefined' ? 'undefined' : last_response.last_recall.sequence) + '\n';
+                msg += 'mode: ' + (typeof last_response.last_recall.mode == 'undefined' ? 'undefined' : last_response.last_recall.mode) + '\n';
+                msg += 'next_recall\n';
+                msg += 'sequence: ' + (typeof last_response.next_recall.sequence == 'undefined' ? 'undefined' : last_response.next_recall.sequence) + '\n';
+                msg += 'mode: ' + (typeof last_response.next_recall.mode == 'undefined' ? 'undefined' : last_response.next_recall.mode) + '\n';
+            }
+            msg += e.status + ' : ' + e.responseText;
+            jQuery('.sync-error .sync-error-detail').text(msg);
+            jQuery('.sync-error').slideDown();
+            jQuery('.sync-wizard').slideUp();
+
             is_syncing = false;
             //window.location.reload();
         });

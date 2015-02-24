@@ -1,71 +1,5 @@
 [
     {
-        "name": "doctrine/inflector",
-        "version": "v1.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/inflector.git",
-            "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/inflector/zipball/54b8333d2a5682afdc690060c1cf384ba9f47f08",
-            "reference": "54b8333d2a5682afdc690060c1cf384ba9f47f08",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "time": "2013-01-10 21:49:15",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\Common\\Inflector\\": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jonathan Wage",
-                "email": "jonwage@gmail.com",
-                "homepage": "http://www.jwage.com/",
-                "role": "Creator"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com",
-                "homepage": "http://www.instaclick.com"
-            },
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Benjamin Eberlei",
-                "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Johannes Schmitt",
-                "email": "schmittjoh@gmail.com",
-                "homepage": "https://github.com/schmittjoh",
-                "role": "Developer of wrapped JMSSerializerBundle"
-            }
-        ],
-        "description": "Common String Manipulations with regard to casing and singular/plural rules.",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "inflection",
-            "pluarlize",
-            "singuarlize",
-            "string"
-        ]
-    },
-    {
         "name": "guzzle/guzzle",
         "version": "v3.9.2",
         "version_normalized": "3.9.2.0",
@@ -160,18 +94,87 @@
         ]
     },
     {
-        "name": "mailingreport/mailingreport-php",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
+        "name": "doctrine/inflector",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/mailingreport/mailingreport-php.git",
-            "reference": "a8ef467c7f0372fca4d97c6d7eff58e0ab9358ef"
+            "url": "https://github.com/doctrine/inflector.git",
+            "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mailingreport/mailingreport-php/zipball/a8ef467c7f0372fca4d97c6d7eff58e0ab9358ef",
-            "reference": "a8ef467c7f0372fca4d97c6d7eff58e0ab9358ef",
+            "url": "https://api.github.com/repos/doctrine/inflector/zipball/0bcb2e79d8571787f18b7eb036ed3d004908e604",
+            "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*"
+        },
+        "time": "2014-12-20 21:24:13",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Doctrine\\Common\\Inflector\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Roman Borschel",
+                "email": "roman@code-factory.org"
+            },
+            {
+                "name": "Benjamin Eberlei",
+                "email": "kontakt@beberlei.de"
+            },
+            {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
+            },
+            {
+                "name": "Jonathan Wage",
+                "email": "jonwage@gmail.com"
+            },
+            {
+                "name": "Johannes Schmitt",
+                "email": "schmittjoh@gmail.com"
+            }
+        ],
+        "description": "Common String Manipulations with regard to casing and singular/plural rules.",
+        "homepage": "http://www.doctrine-project.org",
+        "keywords": [
+            "inflection",
+            "pluralize",
+            "singularize",
+            "string"
+        ]
+    },
+    {
+        "name": "mailingreport/mailingreport-php",
+        "version": "2.1.1",
+        "version_normalized": "2.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mailingreport/mailingreport-php.git",
+            "reference": "d850f8126f741220818fd49cce6772219d7b3b4b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mailingreport/mailingreport-php/zipball/d850f8126f741220818fd49cce6772219d7b3b4b",
+            "reference": "d850f8126f741220818fd49cce6772219d7b3b4b",
             "shasum": ""
         },
         "require": {
@@ -182,7 +185,7 @@
         "require-dev": {
             "phpunit/phpunit": "~3.7"
         },
-        "time": "2014-09-30 12:28:36",
+        "time": "2014-11-03 16:09:40",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -211,18 +214,18 @@
     },
     {
         "name": "symfony/event-dispatcher",
-        "version": "v2.5.6",
-        "version_normalized": "2.5.6.0",
+        "version": "v2.6.4",
+        "version_normalized": "2.6.4.0",
         "target-dir": "Symfony/Component/EventDispatcher",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/EventDispatcher.git",
-            "reference": "804eb28dbbfba9ffdab21fe2066744906cea2212"
+            "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/804eb28dbbfba9ffdab21fe2066744906cea2212",
-            "reference": "804eb28dbbfba9ffdab21fe2066744906cea2212",
+            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/f75989f3ab2743a82fe0b03ded2598a2b1546813",
+            "reference": "f75989f3ab2743a82fe0b03ded2598a2b1546813",
             "shasum": ""
         },
         "require": {
@@ -230,19 +233,20 @@
         },
         "require-dev": {
             "psr/log": "~1.0",
-            "symfony/config": "~2.0",
-            "symfony/dependency-injection": "~2.0,<2.6.0",
-            "symfony/stopwatch": "~2.2"
+            "symfony/config": "~2.0,>=2.0.5",
+            "symfony/dependency-injection": "~2.6",
+            "symfony/expression-language": "~2.6",
+            "symfony/stopwatch": "~2.3"
         },
         "suggest": {
             "symfony/dependency-injection": "",
             "symfony/http-kernel": ""
         },
-        "time": "2014-10-01 15:43:05",
+        "time": "2015-02-01 16:10:57",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.5-dev"
+                "dev-master": "2.6-dev"
             }
         },
         "installation-source": "dist",

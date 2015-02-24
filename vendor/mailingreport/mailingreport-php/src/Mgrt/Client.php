@@ -36,7 +36,6 @@ class Client extends BaseClient
         $config = Collection::fromConfig($config, $defaultOptions, $requiredOptions);
         $description = ServiceDescription::factory(__DIR__.'/Resources/service.php');
         $client = new self($config->get('base_url'), $config);
-        $client->setDefaultOption('verify', false);
         $client->setDefaultOption('auth', array($config['public_key'], $config['private_key'], 'Basic'));
         $client->setDescription($description);
         $client->setUserAgent(sprintf('mgrt-php/%s guzzle/%s PHP/%s', \Mgrt\Version::VERSION, \Guzzle\Common\Version::VERSION, PHP_VERSION));
